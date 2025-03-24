@@ -30,7 +30,7 @@ void listConnectedDevices() {
 
     while (SetupDiEnumDeviceInfo(deviceInfoSet, index, &deviceInfoData)) // enumera din set 1 cate 1 
     {
-        char deviceName[100];
+        char deviceName[256];
         DWORD size = 0;
 
         if (SetupDiGetDeviceInstanceIdA(deviceInfoSet, &deviceInfoData, deviceName, sizeof(deviceName), &size)) // obtine numele 
